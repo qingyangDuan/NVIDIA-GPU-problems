@@ -17,5 +17,6 @@ ls /usr/src | grep nvidia
 sudo dkms install -m nvidia -v 455.32.00（455.32.00表示的是驱动版本号）
 
 
-或者： 删除  /usr/src 中的nvidia驱动，从别的地方复制过来 nvidia-4XX.XX 文件，用dkms重装。
+或者： 删除  /usr/src 中的nvidia驱动，然后用sudo apt 安装驱动,  /usr/src中就会出现新装的 nvidia-4XX.XX 文件，
+重启，若不行在用dkms重装。
 如果出错，看出错信息，通常需要对 kernel 文件内用 sudo make oldconfig
